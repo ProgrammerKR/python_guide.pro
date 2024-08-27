@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Guide to Python | Programming Hero 123</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="path/to/your/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e;
+            color: #dcdcdc;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #2d2d2d;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        h1, h2, h3 {
+            color: #9cdcfe;
+        }
+        .step {
+            margin-bottom: 30px;
+        }
+        code, pre {
+            display: block;
+            background: #1e1e1e;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            color: #c5c8c6;
+            border: 1px solid #444;
+        }
+        .copy-btn {
+            background: #007acc;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .copy-btn:hover {
+            background: #005a9e;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #2d2d2d;
+            color: #dcdcdc;
+            padding: 10px;
+            text-align: center;
+            border-top: 1px solid #444;
+        }
+        footer a {
+            color: #9cdcfe;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 767px) {
+            .container {
+                padding: 10px;
+            }
+        }
+        .navbar-nav .nav-item {
+            margin-left: 10px;
+        }
+        .nav-link {
+            color: #9cdcfe !important;
+        }
+        .nav-link:hover {
+            color: #7ab9ff !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Python Guide</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#python-history"><i class="fas fa-history"></i> Python History</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#write-code"><i class="fas fa-code"></i> Write Code</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#run-code"><i class="fas fa-play"></i> Run Code</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#setup"><i class="fas fa-cogs"></i> Setup</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#syntax"><i class="fas fa-sitemap"></i> Syntax & Basics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#advanced-topics"><i class="fas fa-rocket"></i> Advanced Topics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#faq"><i class="fas fa-question-circle"></i> FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Comprehensive Guide to Python</h1>
+
+        <!-- Python History -->
+        <div class="step" id="python-history">
+            <h2>Python History</h2>
+            <p>Python is an interpreted, high-level, general-purpose programming language created by Guido van Rossum and first released in 1991. Its design philosophy emphasizes code readability and simplicity.</p>
+            <p><strong>Key Milestones in Python's History:</strong></p>
+            <ul>
+                <li><strong>1991:</strong> Python 0.9.0 was released. It included major features such as exception handling, functions, and the core data types.</li>
+                <li><strong>2000:</strong> Python 2.0 introduced list comprehensions, garbage collection, and Unicode support.</li>
+                <li><strong>2008:</strong> Python 3.0, also known as "Python 3000" or "Py3k," was released, which included many changes that were not backward-compatible with Python 2.x.</li>
+                <li><strong>2018:</strong> Python 3.7 was released, bringing data classes, context variables, and improved performance.</li>
+                <li><strong>2020:</strong> Python 3.9 introduced new syntax features, such as the "walrus operator" and type hinting improvements.</li>
+            </ul>
+            <p>Python continues to evolve, with the community actively developing new features and improvements.</p>
+        </div>
+
+        <!-- Write Code -->
+        <div class="step" id="write-code">
+            <h2>Step 1: Write the Python Code</h2>
+            <p>To start, you’ll need to write your Python code. Create a new file named <code>HelloWorld.py</code> and add the following code:</p>
+            <pre><code id="pythonCode"># HelloWorld.py
+print("Hello, World!")
+            </code></pre>
+            <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+        </div>
+
+        <!-- Run Code -->
+        <div class="step" id="run-code">
+            <h2>Step 2: Run the Code</h2>
+            <p>To execute your Python script, follow these instructions:</p>
+
+            <h3>On Desktop:</h3>
+            <p>1. Open a terminal or command prompt and navigate to the directory where you saved <code>HelloWorld.py</code>.</p>
+            <p>2. Run the script by executing the following command:</p>
+            <pre><code>python HelloWorld.py</code></pre>
+            <p>You should see <code>Hello, World!</code> printed to your terminal or command prompt.</p>
+        </div>
+
+        <!-- Setup -->
+        <div class="step" id="setup">
+            <h2>Setting Up Your Python Development Environment</h2>
+            <p>Before you can write and run Python programs, you need to set up your development environment. Here’s how:</p>
+            <ol>
+                <li><strong>Download Python:</strong> Visit the <a href="https://www.python.org/downloads/" target="_blank" style="color: #9cdcfe;">Python Downloads</a> page and download the installer for your operating system.</li>
+                <li><strong>Install Python:</strong> Follow the installation instructions provided on the website.</li>
+                <li><strong>Set up the PATH environment variable:</strong> Ensure that the Python installation directory is added to your system’s PATH.</li>
+                <li><strong>Verify the installation:</strong> Open a terminal or command prompt and type <code>python --version</code> or <code>python3 --version</code> to check if Python is correctly installed.</li>
+            </ol>
+        </div>
+
+        <!-- Syntax & Basics -->
+        <div class="step" id="syntax">
+            <h2>Python Syntax and Basics</h2>
+            <p>Python is known for its readability and simplicity. Here are some fundamental concepts:</p>
+            
+            <h3>Basic Structure</h3>
+            <pre><code># This is a Python comment
+print("Hello, World!") # This prints Hello, World! to the console
+            </code></pre>
+            <p>This is a basic structure of a Python script. The <code>print()</code> function outputs text to the console.</p>
+
+            <h3>Data Types</h3>
+            <p>Python supports various data types, including:</p>
+            <ul>
+                <li><code>int</code>: Represents integers.</li>
+                <li><code>float</code>: Represents floating-point numbers.</li>
+                <li><code>str</code>: Represents strings of characters.</li>
+                <li><code>bool</code>: Represents boolean values (True or False).</li>
+                <li><code>list</code>: Represents a mutable sequence of values.</li>
+                <li><code>tuple</code>: Represents an immutable sequence of values.</li>
+                <li><code>dict</code>: Represents a collection of key-value pairs.</li>
+                <li><code>set</code>: Represents an unordered collection of unique values.</li>
+            </ul>
+
+            <h3>Control Flow Statements</h3>
+            <p>Python provides several control flow statements such as:</p>
+            <ul>
+                <li><code>if</code>, <code>elif</code>, <code>else</code>: Conditional statements.</li>
+                <li><code>for</code>, <code>while</code>: Looping statements.</li>
+                <li><code>break</code>, <code>continue</code>: Control loop execution.</li>
+                <li><code>try</code>, <code>except</code>, <code>finally</code>: Exception handling statements.</li>
+            </ul>
+        </div>
+
+        <!-- Advanced Topics -->
+        <div class="step" id="advanced-topics">
+            <h2>Advanced Python Topics</h2>
+            <p>As you become more familiar with Python, you might want to explore advanced topics:</p>
+
+            <h3>Object-Oriented Programming (OOP)</h3>
+            <p>Python supports object-oriented programming, allowing you to create classes and objects. Key concepts include:</p>
+            <ul>
+                <li><strong>Inheritance:</strong> Allows a class to inherit attributes and methods from another class.</li>
+                <li><strong>Polymorphism:</strong> Enables methods to perform different tasks based on the object.</li>
+                <li><strong>Encapsulation:</strong> Restricts access to certain attributes and methods.</li>
+                <li><strong>Abstraction:</strong> Hides the complex implementation details and shows only the necessary features.</li>
+            </ul>
+
+            <h3>Decorators</h3>
+            <p>Decorators are a powerful feature in Python that allows you to modify the behavior of functions or methods.</p>
+            <pre><code># Example of a decorator
+def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function.")
+        func()
+        print("Something is happening after the function.")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+            </code></pre>
+
+            <h3>Generators</h3>
+            <p>Generators are functions that return an iterator and use the <code>yield</code> statement to produce values one at a time.</p>
+            <pre><code># Example of a generator
+def countdown(num):
+    while num > 0:
+        yield num
+        num -= 1
+
+for i in countdown(5):
+    print(i)
+            </code></pre>
+
+            <h3>Concurrency and Parallelism</h3>
+            <p>Python supports concurrency and parallelism using threads, processes, and asynchronous programming. The <code>threading</code>, <code>multiprocessing</code>, and <code>asyncio</code> modules can help you manage these tasks.</p>
+        </div>
+
+        <!-- FAQ -->
+        <div class="step" id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <h3>What is Python?</h3>
+            <p>Python is a high-level, interpreted programming language known for its readability and simplicity. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming.</p>
+
+            <h3>Do I need to install Python to run Python programs?</h3>
+            <p>Yes, you need to install Python to run Python programs. You can download the latest version from the <a href="https://www.python.org/downloads/" target="_blank" style="color: #9cdcfe;">official Python website</a>.</p>
+
+            <h3>Where can I learn more about Python?</h3>
+            <p>There are many resources available online including tutorials, documentation, and forums. You can start with the <a href="https://docs.python.org/3/tutorial/" target="_blank" style="color: #9cdcfe;">official Python tutorial</a>.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Java Guide. All rights reserved.</p>
+        <p><a href="https://github.com/ProgrammerKR" target="_blank">GitHub</a> | <a href="https://twitter.com/Pro_Hero_123" target="_blank">Twitter</a> | <a href="https://whatsapp.com/channel/0029VajmKFb9cDDiAYry3Z2x" target="_blank">Whatsapp</a></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function copyCode() {
+            const code = document.getElementById('pythonCode');
+            const range = document.createRange();
+            range.selectNode(code);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('Code copied to clipboard!');
+        }
+    </script>
+</body>
+</html>
